@@ -4,9 +4,11 @@ def getNiu(card):
         sum+=card[x]
     for i in range(5):
         for j in range(i+1, 5):
-            for k in range(j+1, 5):
-                if (card[i] + card[j] + card[k]) % 10 == 0:
-                    return sum%10;
+            if (sum - card[i] - card[j]) % 10 == 0:
+                print "youniu"
+                return sum % 10
+            else:
+                pass 
     print "no Niu"
     return -1;
 if __name__ == "__main__":
